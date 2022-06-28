@@ -55,40 +55,6 @@ public class BaseTests {
         }
     }
 
-    ////////////////////////////////////
-    public void openRegistrationForm (){
-       WebElement element2 = wd.findElement(By.cssSelector("a[href='/registration?url=%2Fsearch']"));
-        element2.click();
-    }
-
-    public void fillRegistrationForm (String name, String lastName,
-                                      String email, String password){
-        type(By.xpath("//input[@id='name'"), name);
-        type(By.xpath("//input[@id='lastName']"),lastName);
-        type(By.xpath("//input[@id='email']"),email);
-        type(By.xpath("//input[@id='password']"),password);
-
-    }
-
-    public void type1 (By locator, String text){
-        if (text != null){
-            WebElement element2 = wd.findElement(locator);
-            element2.click();
-            element2.clear();
-            element2.sendKeys();
-        }
-    }
-
-    public void submitCheckBox (){
-        wd.findElement(By.cssSelector("[href='/terms-of-use']")).click();
-        wd.findElement(By.cssSelector("[href='privacy-police']")).click();
-       wd.findElement(By.cssSelector("div[class ='checkbox-container']")).click();
-    }
-
-    public void submitRegistration (){
-        wd.findElement(By.xpath("//button[@type='submit']")).click();
-    }
-
 
 
 

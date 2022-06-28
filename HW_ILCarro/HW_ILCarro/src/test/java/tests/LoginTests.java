@@ -1,5 +1,8 @@
 package tests;
 //import org.openqa.selenium.WebDriver;
+
+
+import com.google.common.annotations.VisibleForTesting;
 import org.testng.annotations.Test;
 
 public class LoginTests extends BaseTests {
@@ -32,7 +35,4 @@ public class LoginTests extends BaseTests {
         fillLoginForm ("felicita92mail.com","Felicita92$");//4 + invalid data
         submitLogin ();//5
     }
-
-
-
 }
